@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Barakah Blasters | Official Cricket Franchise</title>
+  <meta name="description" content="Official website of Barakah Blasters Cricket Club. Blessed with Grace. Blasting with Glory. Meet the 10 elite warriors.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#squad-banner" class="nav-brand">
+        <!-- Official Logo Crest -->
+        <img src="assets/logo.png" alt="Barakah Blasters Logo" class="nav-logo-crest">
+
+        <div class="brand-text">
+          <span class="brand-title">Barakah <span>Blasters</span></span>
+          <span class="brand-tagline">H.P.L - 7 Franchise</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#squad-banner" class="nav-link active">Team Banner</a></li>
+        <li><a href="#hero" class="nav-link">Overview</a></li>
+        <li><a href="#squad" class="nav-link">The 10 Squad</a></li>
+        <li><a href="#match-center" class="nav-link">Match Center</a></li>
+        <li><a href="#creed" class="nav-link">The Creed</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Interactive Sound Toggle -->
+        <button id="soundToggleBtn" class="sound-btn" aria-label="Toggle Sound Effects">
+          <!-- Populated by JS -->
+        </button>
+
+        <a href="#squad" class="btn-primary nav-cta-btn">
+          <span>Meet The 10</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Backdrop Overlay -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+
+  <!-- Section 1: Grand 10-Player Championship Banner -->
+  <section class="team-banner-section" id="squad-banner">
+    <!-- Atmospheric Stadium Light Beams -->
+    <div class="banner-stadium-lights" aria-hidden="true">
+      <div class="light-beam beam-left"></div>
+      <div class="light-beam beam-center"></div>
+      <div class="light-beam beam-right"></div>
+    </div>
+
+    <!-- Colossal Background Watermark Text "BARAKAH BLASTERS" -->
+    <div class="banner-bg-text-container" aria-hidden="true">
+      <div class="banner-bg-text-layer fill-layer">BARAKAH BLASTERS</div>
+      <div class="banner-bg-text-layer stroke-layer">BARAKAH BLASTERS</div>
+    </div>
+
+    <div class="container banner-inner-container">
+      <!-- Banner Header Block -->
+      <div class="banner-header-wrap">
+        <div class="banner-tag-pill">
+          <span class="pulse-dot"></span>
+          <span>Official Team Panorama • H.P.L - 7</span>
+        </div>
+        <h2 class="banner-headline">The <span>10 Blasters</span></h2>
+        <p class="banner-subtext">
+          Ten warriors, one brotherhood. Select any warrior to focus on their tactical profile.
+        </p>
+      </div>
+
+      <!-- 10 Players Panoramic Stage -->
+      <div class="banner-players-stage" id="bannerPlayersStage">
+        <!-- Rendered dynamically by js/app.js from BLASTERS_SQUAD -->
+      </div>
+
+      <!-- Banner Actions & Details Bar -->
+      <div class="banner-action-bar">
+        <div class="banner-action-meta">
+          <img src="assets/logo.png" alt="Barakah Blasters Crest" class="banner-action-crest">
+          <div class="banner-meta-copy">
+            <span class="banner-meta-title">Barakah Blasters Cricket Club</span>
+            <span class="banner-meta-ground">Ground: Trimohoni Cricket Ground • Season 7 Edition</span>
+          </div>
+        </div>
+
+        <div class="banner-action-buttons">
+          <a href="#match-center" class="btn-primary banner-dl-btn" title="View Upcoming Match Schedule & Tournament Fixtures">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>View Match Schedule</span>
+          </a>
+          <a href="#hero" class="btn-outline banner-explore-btn">
+            <span>Explore Overview</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Hero Section & 10-Player Sliding Showcase -->
+  <header class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-text-wrap">
+        <div class="hero-badge-wrap">
+          <span class="section-tag">
+            <span class="dot"></span>
+            Official Franchise • H.P.L - 7 Edition
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          Blessed with <span class="emerald-accent">Grace.</span><br/>
+          Blasting with <span class="glow-gold">Glory.</span>
+        </h1>
+
+        <p class="hero-motto">
+          Welcome to the home of <strong>Barakah Blasters</strong>. Ten elite cricket warriors united under one brotherhood, combining calculated discipline with fearless boundary-clearing firepower.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#squad" class="btn-primary">
+            <span>Explore The 10 Blasters</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          
+          <button class="btn-outline bat-strike-btn" aria-label="Simulate Cricket Bat Crack">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <span>Hit Willow Strike SFX</span>
+          </button>
+        </div>
+
+        <!-- Hero Stats Bar (4 in a line) -->
+        <div class="hero-stats-bar">
+          <div class="stat-item">
+            <span class="stat-num">10</span>
+            <span class="stat-label">Elite Warriors</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Club</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">7th</span>
+            <span class="stat-label">Edition</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num stat-icon-num">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h8l-2 8 10-12h-8l2-8z"/></svg>
+            </span>
+            <span class="stat-label">Spirit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Official Franchise Logo Showcase Card -->
+      <div class="hero-logo-wrap" id="heroLogoContainer">
+        <div class="emblem-halo"></div>
+
+        <div class="hero-logo-card">
+          <div class="logo-card-topbar">
+            <span class="logo-card-pill">
+              <span class="pulse-dot"></span>
+              Official Franchise Crest
+            </span>
+            <span class="logo-edition-badge">H.P.L - 7</span>
+          </div>
+
+          <div class="hero-logo-stage">
+            <div class="logo-glow-disc" aria-hidden="true"></div>
+            <img src="assets/logo.png" alt="Barakah Blasters Official Crest" class="hero-main-crest" />
+          </div>
+
+          <div class="logo-card-info">
+            <h3 class="logo-team-name">Barakah <span>Blasters</span></h3>
+            <p class="logo-team-motto">Blessed with Grace • Blasting with Glory</p>
+            <div class="logo-badges-row">
+              <span class="logo-meta-pill">Season 7</span>
+              <span class="logo-meta-pill gold-accent">Trimohoni Ground</span>
+              <span class="logo-meta-pill">10 Warriors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section: The 10 Blasters (Squad Hub) -->
+  <section class="squad-section" id="squad">
+    <div class="container">
+      <div class="squad-header-block">
+        <span class="section-tag">
+          <span class="dot"></span>
+          Blasters Squad Lineup
+        </span>
+        <h2 class="section-title">The <span>10 Blasters</span></h2>
+        <p class="section-subtitle">
+          Ten elite players, perfectly balanced for all match scenarios. Explore player profiles, signature weapons, and career stats.
+        </p>
+      </div>
+
+      <!-- Squad Controls: Filter pills & View Toggle -->
+      <div class="squad-controls-bar">
+        <div class="filter-pills-group">
+          <button class="filter-pill active" data-role="all">All 10 Players</button>
+          <button class="filter-pill" data-role="batsman">Batsmen (4)</button>
+          <button class="filter-pill" data-role="allrounder">All-Rounders (4)</button>
+          <button class="filter-pill" data-role="bowler">Bowlers (2)</button>
+        </div>
+
+        <div class="view-toggle-wrap">
+          <button id="viewGridBtn" class="view-toggle-btn active" title="View 4 cards per row grid">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>Card Grid</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- View A: 10 Player Cards Grid -->
+      <div class="squad-grid" id="squadGrid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+      <!-- View B: Interactive Tactical Pitch View -->
+      <div class="tactical-pitch-view" id="tacticalPitchView">
+        <div class="pitch-layout-container">
+          <div class="pitch-board-wrap">
+            <div class="cricket-ground-board" id="cricketPitchBoard">
+              <!-- Rendered dynamically by js/app.js -->
+            </div>
+          </div>
+
+          <!-- Pitch Spotlight Sidebar Card -->
+          <div class="pitch-spotlight-card" id="pitchSpotlight">
+            <!-- Populated dynamically when clicking any player pin on pitch -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Match Center & Vital Records -->
+  <section class="match-section" id="match-center">
+    <div class="container">
+      <div class="match-header-block">
+        <span class="section-tag">
+          <span class="dot"></span>
+          Official Fixture • H.P.L - 7
+        </span>
+        <h2 class="section-title">Match <span>Center</span></h2>
+        <p class="section-subtitle">
+          Official tournament match fixture for Barakah Blasters at Trimohoni Cricket Ground. Countdown to our opening clash on Wednesday, 21 October (Morning Session).
+        </p>
+      </div>
+
+      <div class="match-grid">
+        <!-- Next Match Banner Card -->
+        <div class="fixture-banner-card">
+          <div class="fixture-head">
+            <span class="fixture-status-badge pulse-badge">
+              <span class="dot"></span> Next Clash: Match 02
+            </span>
+            <span class="fixture-venue-header">Wed, 21 Oct • Morning • Trimohoni Ground</span>
+          </div>
+
+          <div class="fixture-teams-row">
+            <div class="team-block">
+              <!-- Mujahid Smashers Official Crest -->
+              <div class="team-crest-badge team-mujahid">
+                <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="team-block-crest-img">
+              </div>
+              <span class="team-block-name">Mujahid Smashers</span>
+              <span class="team-block-role">Opponent</span>
+            </div>
+
+            <div class="versus-wrap">
+              <div class="versus-badge">VS</div>
+              <span class="match-stage-label">Match 02</span>
+            </div>
+
+            <div class="team-block">
+              <!-- Barakah Blasters Official Crest -->
+              <div class="team-crest-badge team-barakah">
+                <img src="assets/logo.png" alt="Barakah Blasters" class="team-block-crest-img">
+              </div>
+              <span class="team-block-name">Barakah Blasters</span>
+              <span class="team-block-role team-home-tag">Our Team</span>
+            </div>
+          </div>
+
+          <!-- Fixture Ground & Time Chips -->
+          <div class="fixture-meta-pills">
+            <span class="meta-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Trimohoni Cricket Ground
+            </span>
+            <span class="meta-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Morning Sharp Start
+            </span>
+            <span class="meta-pill gold-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7"/><path d="M14 14.66V17c0 .55.45 1 1 1h2"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+              H.P.L - 7 Season 7
+            </span>
+          </div>
+
+          <!-- Countdown Timer Display -->
+          <div class="countdown-block">
+            <span class="countdown-label">Time Remaining Until Match 02:</span>
+            <div class="countdown-timer-wrap">
+              <div class="count-unit">
+                <span class="num" id="countDays">01</span>
+                <span class="lbl">Days</span>
+              </div>
+              <div class="count-unit">
+                <span class="num" id="countHours">07</span>
+                <span class="lbl">Hours</span>
+              </div>
+              <div class="count-unit">
+                <span class="num" id="countMins">13</span>
+                <span class="lbl">Mins</span>
+              </div>
+              <div class="count-unit">
+                <span class="num" id="countSecs">00</span>
+                <span class="lbl">Secs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barakah Blasters Tournament Schedule Column -->
+        <div class="results-column fixture-column">
+          <div class="fixture-column-head">
+            <div>
+              <h3 class="fixture-column-title">Our Match Fixtures</h3>
+              <p class="fixture-column-sub">Barakah Blasters official tournament path</p>
+            </div>
+            <a href="assets/hpl7-fixture.jpg" target="_blank" class="fixture-poster-pill" title="View Full Fixture Poster">
+              <span>View Full Fixture</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+
+          <!-- Match 03 Card -->
+          <div class="past-result-card fixture-match-card">
+            <div class="fixture-match-left">
+              <div class="team-mini-crest crest-taqwa">
+                <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders">
+              </div>
+              <div class="fixture-match-info">
+                <div class="fixture-tags-row">
+                  <span class="res-status-win scheduled-pill">Match 03</span>
+                  <span class="fixture-ground-tag">Trimohoni Ground</span>
+                </div>
+                <h4 class="res-opponent">vs Taqwa Thunders</h4>
+                <p class="fixture-timing-text">Wednesday, 21 October • Morning Session</p>
+              </div>
+            </div>
+            <div class="fixture-match-badge">
+              <span class="match-day">WED</span>
+              <span class="match-time">21 OCT • MORNING</span>
+            </div>
+          </div>
+
+          <!-- Match 05 Card -->
+          <div class="past-result-card fixture-match-card">
+            <div class="fixture-match-left">
+              <div class="team-mini-crest crest-mujahid">
+                <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers">
+              </div>
+              <div class="fixture-match-info">
+                <div class="fixture-tags-row">
+                  <span class="res-status-win scheduled-pill">Match 05</span>
+                  <span class="fixture-ground-tag">Trimohoni Ground</span>
+                </div>
+                <h4 class="res-opponent">vs Mujahid Smashers</h4>
+                <p class="fixture-timing-text">Friday, 23 October • Morning Session</p>
+              </div>
+            </div>
+            <div class="fixture-match-badge">
+              <span class="match-day">FRI</span>
+              <span class="match-time">23 OCT • MORNING</span>
+            </div>
+          </div>
+
+          <!-- Match 06 Card -->
+          <div class="past-result-card fixture-match-card">
+            <div class="fixture-match-left">
+              <div class="team-mini-crest crest-taqwa">
+                <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders">
+              </div>
+              <div class="fixture-match-info">
+                <div class="fixture-tags-row">
+                  <span class="res-status-win scheduled-pill">Match 06</span>
+                  <span class="fixture-ground-tag">Trimohoni Ground</span>
+                </div>
+                <h4 class="res-opponent">vs Taqwa Thunders</h4>
+                <p class="fixture-timing-text">Friday, 23 October • Morning Session</p>
+              </div>
+            </div>
+            <div class="fixture-match-badge">
+              <span class="match-day">FRI</span>
+              <span class="match-time">23 OCT • MORNING</span>
+            </div>
+          </div>
+
+          <!-- Grand Final Card -->
+          <div class="past-result-card fixture-match-card grand-final-card">
+            <div class="fixture-match-left">
+              <div class="team-mini-crest crest-trophy">
+                🏆
+              </div>
+              <div class="fixture-match-info">
+                <div class="fixture-tags-row">
+                  <span class="res-status-win final-pill">Grand Final</span>
+                  <span class="fixture-ground-tag">Trimohoni Ground</span>
+                </div>
+                <h4 class="res-opponent gold-text">Finalist 1 vs Finalist 2</h4>
+                <p class="fixture-timing-text">Friday, 23 October • Championship Finale</p>
+              </div>
+            </div>
+            <div class="fixture-match-badge final-badge">
+              <span class="match-day">FRI</span>
+              <span class="match-time">23 OCT • MORNING</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: The Creed (Barakah DNA) -->
+  <section class="creed-section" id="creed">
+    <div class="container">
+      <div class="creed-header-block">
+        <span class="section-tag">
+          <span class="dot"></span>
+          Franchise Identity
+        </span>
+        <h2 class="section-title">The <span>Blaster Creed</span></h2>
+        <p class="section-subtitle">
+          More than cricket. Barakah Blasters is built upon enduring principles that guide every innings, run chase, and bowling spell.
+        </p>
+      </div>
+
+      <div class="creed-grid">
+        <div class="creed-card">
+          <div class="creed-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 8.5L22 9.5L17 14.5L18.5 21.5L12 18L5.5 21.5L7 14.5L2 9.5L9 8.5L12 2Z"/></svg>
+          </div>
+          <h3 class="creed-title">1. Barakah (Blessed Intent)</h3>
+          <p class="creed-desc">
+            We play with absolute integrity, gratitude, and moral sportsmanship. True victory begins inside before the first ball is bowled.
+          </p>
+        </div>
+
+        <div class="creed-card">
+          <div class="creed-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="creed-title">2. Blasting Firepower</h3>
+          <p class="creed-desc">
+            Fearless aggressive modern cricket. We take the game to the opposition with electric running, searing pace, and towering sixes.
+          </p>
+        </div>
+
+        <div class="creed-card">
+          <div class="creed-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="creed-title">3. Ten Titans, One Soul</h3>
+          <p class="creed-desc">
+            Every warrior defends for the other. When one blaster strikes, all ten celebrate with identical passion and shared brotherhood.
+          </p>
+        </div>
+
+        <div class="creed-card">
+          <div class="creed-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="creed-title">4. Ice In The Veins</h3>
+          <p class="creed-desc">
+            Surgical execution under maximum stadium pressure. When the match hangs on 6 deliveries, we stay ice-cold and deliver perfection.
+          </p>
+        </div>
+      </div>
+
+      <!-- Franchise Meta Bar -->
+      <div class="franchise-meta-bar">
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="meta-text">
+            <div class="label">Home Ground</div>
+            <div class="val">Trimohoni Cricket Ground</div>
+          </div>
+        </div>
+
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="meta-text">
+            <div class="label">Head Coach</div>
+            <div class="val">Sir Syed Hassan</div>
+          </div>
+        </div>
+
+        <div class="meta-item">
+          <div class="meta-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          </div>
+          <div class="meta-text">
+            <div class="label">Official Kit Colors</div>
+            <div class="val">Midnight Navy & Athletic Gold (H.P.L - 7)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Compact Modern Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-main-row">
+        <!-- Brand identity -->
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Barakah Blasters Logo" class="footer-logo-img">
+          <div class="brand-text">
+            <span class="brand-title">Barakah <span>Blasters</span></span>
+            <span class="brand-tagline">H.P.L - 7 Franchise</span>
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="footer-social-wrap">
+          <span class="social-lead-label">Follow Us:</span>
+          <div class="footer-social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Willow Strike SFX button -->
+        <div class="footer-action">
+          <button class="btn-outline bat-strike-btn footer-strike-btn" aria-label="Simulate Cricket Bat Crack">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <span>Play Willow Bat SFX</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Divider line -->
+      <div class="footer-divider"></div>
+
+      <!-- Bottom Row with Copyright & Non-clickable Developed By -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
+          &copy; 2026 Barakah Blasters Cricket Club. All Rights Reserved.
+        </div>
+        <div class="footer-dev-credit" aria-label="Developer credits">
+          Developed By <span class="dev-name">Rayhansadik.dev</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/sound.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
