@@ -2931,6 +2931,13 @@ h1, h2, h3, h4, .font-display {
   }
 }
 
+/* Tablets & Mobile Devices (<= 1024px) - Remove "The 10 Blasters" banner headline */
+@media (max-width: 1024px) {
+  .banner-headline {
+    display: none !important;
+  }
+}
+
 /* Medium Tablets & Landscape Devices (<= 992px) */
 @media (max-width: 992px) {
   .hero-grid {
