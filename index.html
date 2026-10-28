@@ -12,8 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets (supports both root and css/ folder) -->
-  <link rel="stylesheet" href="css/styles.css?v=2.4">
-  <link rel="stylesheet" href="styles.css?v=2.4">
+  <link rel="stylesheet" href="css/styles.css?v=2.7">
+  <link rel="stylesheet" href="styles.css?v=2.7">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -342,12 +342,6 @@
             </div>
           </div>
 
-          <!-- Result Banner -->
-          <div class="featured-result-banner" id="featResultBanner">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <span id="featResultText">Mujahid Smashers won by 7 wickets</span>
-          </div>
-
           <!-- Fixture Ground & Time Chips -->
           <div class="fixture-meta-pills">
             <span class="meta-pill">
@@ -363,26 +357,6 @@
               H.P.L - 7 Season 7
             </span>
           </div>
-
-          <!-- Tournament Campaign Stats -->
-          <div class="campaign-stats-row">
-            <div class="campaign-stat-item">
-              <span class="campaign-stat-val">5</span>
-              <span class="campaign-stat-lbl">Matches</span>
-            </div>
-            <div class="campaign-stat-item">
-              <span class="campaign-stat-val">254</span>
-              <span class="campaign-stat-lbl">Runs Scored</span>
-            </div>
-            <div class="campaign-stat-item">
-              <span class="campaign-stat-val">99/7</span>
-              <span class="campaign-stat-lbl">Best Score</span>
-            </div>
-            <div class="campaign-stat-item">
-              <span class="campaign-stat-val">T10</span>
-              <span class="campaign-stat-lbl">Format</span>
-            </div>
-          </div>
         </div>
 
         <!-- All Tournament Results Column (Right Side) -->
@@ -396,34 +370,6 @@
               <span>Full Fixture</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
-          </div>
-
-          <!-- 1st Match Card -->
-          <div class="result-match-card active-match" data-match-idx="0">
-            <div class="result-card-top">
-              <span class="result-card-badge">1st Match • League</span>
-              <span class="result-card-date">21 Oct • 10 Ov.</span>
-            </div>
-            <div class="result-card-teams-box">
-              <div class="result-team-entry">
-                <div class="result-team-left">
-                  <img src="assets/logo.png" alt="Barakah Blasters" class="result-team-crest">
-                  <span class="result-team-title">Barakah Blasters</span>
-                </div>
-                <span class="result-team-score-num">58/7 <small>(9.3 Ov)</small></span>
-              </div>
-              <div class="result-team-entry is-winner">
-                <div class="result-team-left">
-                  <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="result-team-crest">
-                  <span class="result-team-title">Mujahid Smashers</span>
-                </div>
-                <span class="result-team-score-num">59/0 <small>(4.0 Ov)</small></span>
-              </div>
-            </div>
-            <div class="result-card-footer winner-footer">
-              <span>Mujahid Smashers won by 7 wickets</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
           </div>
 
           <!-- 2nd Match Card -->
@@ -513,28 +459,31 @@
           <!-- Final Match Card -->
           <div class="result-match-card grand-final-result-card" data-match-idx="4">
             <div class="result-card-top">
-              <span class="result-card-badge badge-final">Grand Final 🏆</span>
-              <span class="result-card-date" style="color: var(--gold-dark); font-weight: 900;">23 Oct • 10 Ov.</span>
+              <span class="result-card-badge badge-final">🏆 Grand Final</span>
+              <span class="result-card-date final-gold-date">23 Oct • 10 Ov.</span>
             </div>
             <div class="result-card-teams-box">
               <div class="result-team-entry">
                 <div class="result-team-left">
-                  <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="result-team-crest">
+                  <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="result-team-crest final-crest">
                   <span class="result-team-title">Mujahid Smashers</span>
                 </div>
                 <span class="result-team-score-num">89/5 <small>(10.0 Ov)</small></span>
               </div>
-              <div class="result-team-entry is-winner">
+              <div class="result-team-entry is-winner final-winner-row">
                 <div class="result-team-left">
-                  <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders" class="result-team-crest">
-                  <span class="result-team-title" style="color: var(--gold-dark); font-weight: 900;">Taqwa Thunders 🏆</span>
+                  <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders" class="result-team-crest final-crest">
+                  <div class="final-title-group">
+                    <span class="result-team-title final-champion-name">Taqwa Thunders</span>
+                    <span class="champion-mini-tag">🏆 Champions</span>
+                  </div>
                 </div>
-                <span class="result-team-score-num" style="color: var(--gold-dark); font-weight: 900;">92/1 <small>(7.1 Ov)</small></span>
+                <span class="result-team-score-num final-champion-score">92/1 <small>(7.1 Ov)</small></span>
               </div>
             </div>
             <div class="result-card-footer final-footer">
-              <span style="font-weight: 900;">Taqwa Thunders won by 6 wickets (Champions)</span>
-              <span>🏆</span>
+              <span class="final-footer-text">🏆 Taqwa Thunders • Champions</span>
+              <span class="final-footer-sub">Won by 6 wkts</span>
             </div>
           </div>
         </div>
