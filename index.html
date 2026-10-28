@@ -12,8 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets (supports both root and css/ folder) -->
-  <link rel="stylesheet" href="css/styles.css?v=2.3">
-  <link rel="stylesheet" href="styles.css?v=2.3">
+  <link rel="stylesheet" href="css/styles.css?v=2.4">
+  <link rel="stylesheet" href="styles.css?v=2.4">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -109,9 +109,9 @@
         </div>
 
         <div class="banner-action-buttons">
-          <a href="#match-center" class="btn-primary banner-dl-btn" title="View Upcoming Match Schedule & Tournament Fixtures">
+          <a href="#match-center" class="btn-primary banner-dl-btn" title="View Tournament Match Results & Scorecards">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            <span>View Match Schedule</span>
+            <span>View Match Results</span>
           </a>
           <a href="#hero" class="btn-outline banner-explore-btn">
             <span>Explore Overview</span>
@@ -269,58 +269,94 @@
       <div class="match-header-block">
         <span class="section-tag">
           <span class="dot"></span>
-          Official Fixture • H.P.L - 7
+          Tournament Results • H.P.L - 7
         </span>
         <h2 class="section-title">Match <span>Center</span></h2>
         <p class="section-subtitle">
-          Official tournament match fixture for Barakah Blasters at Trimohoni Cricket Ground. Countdown to our opening clash on Wednesday, 21 October (Morning Session).
+          Official tournament match results and scorecards for Barakah Blasters and H.P.L - 7 at Trimohoni Cricket Ground.
         </p>
       </div>
 
       <div class="match-grid">
-        <!-- Next Match Banner Card -->
-        <div class="fixture-banner-card">
-          <div class="fixture-head">
-            <span class="fixture-status-badge pulse-badge">
-              <span class="dot"></span> Next Clash: Match 02
-            </span>
-            <span class="fixture-venue-header">Wed, 21 Oct • Morning • Trimohoni Ground</span>
+        <!-- Featured Match Card (Left Column) -->
+        <div class="fixture-banner-card" id="featuredMatchCard">
+          <!-- Match Switcher Tabs -->
+          <div class="match-tabs-bar" role="tablist" aria-label="Select match scorecard">
+            <button class="match-tab-btn active" data-match-idx="0" role="tab" aria-selected="true">
+              <span>1st Match</span>
+            </button>
+            <button class="match-tab-btn" data-match-idx="1" role="tab" aria-selected="false">
+              <span>2nd Match</span>
+            </button>
+            <button class="match-tab-btn" data-match-idx="2" role="tab" aria-selected="false">
+              <span>3rd Match</span>
+            </button>
+            <button class="match-tab-btn" data-match-idx="3" role="tab" aria-selected="false">
+              <span>4th Match (Walkover)</span>
+            </button>
+            <button class="match-tab-btn final-tab" data-match-idx="4" role="tab" aria-selected="false">
+              <span>🏆 Final Match</span>
+            </button>
           </div>
 
-          <div class="fixture-teams-row">
-            <div class="team-block">
-              <!-- Mujahid Smashers Official Crest -->
-              <div class="team-crest-badge team-mujahid">
-                <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="team-block-crest-img">
+          <!-- Featured Match Header -->
+          <div class="fixture-head">
+            <span class="fixture-status-badge" id="featStatusBadge">
+              <span class="dot"></span> 1st Match • League
+            </span>
+            <span class="fixture-venue-header" id="featVenueHeader">Wed, 21 Oct • 10 Ov. • Trimohoni Ground</span>
+          </div>
+
+          <!-- Featured Head-to-Head Scoreboard -->
+          <div class="fixture-teams-row featured-scoreboard-row">
+            <!-- Team 1 -->
+            <div class="team-block" id="featTeam1Block">
+              <div class="team-crest-badge team-barakah" id="featTeam1Badge">
+                <img src="assets/logo.png" alt="Barakah Blasters" class="team-block-crest-img" id="featTeam1Crest">
               </div>
-              <span class="team-block-name">Mujahid Smashers</span>
-              <span class="team-block-role">Opponent</span>
+              <span class="team-block-name" id="featTeam1Name">Barakah Blasters</span>
+              <span class="team-block-role team-home-tag" id="featTeam1Role">Our Team</span>
+              <div class="team-score-box">
+                <span class="team-big-score" id="featTeam1Score">58/7</span>
+                <span class="team-overs-label" id="featTeam1Overs">(9.3 Ov)</span>
+              </div>
             </div>
 
+            <!-- VS Badge -->
             <div class="versus-wrap">
-              <div class="versus-badge">VS</div>
-              <span class="match-stage-label">Match 02</span>
+              <div class="versus-badge" id="featVsBadge">VS</div>
+              <span class="match-stage-label" id="featStageLabel">Match 02</span>
             </div>
 
-            <div class="team-block">
-              <!-- Barakah Blasters Official Crest -->
-              <div class="team-crest-badge team-barakah">
-                <img src="assets/logo.png" alt="Barakah Blasters" class="team-block-crest-img">
+            <!-- Team 2 -->
+            <div class="team-block" id="featTeam2Block">
+              <div class="team-crest-badge team-mujahid" id="featTeam2Badge">
+                <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="team-block-crest-img" id="featTeam2Crest">
               </div>
-              <span class="team-block-name">Barakah Blasters</span>
-              <span class="team-block-role team-home-tag">Our Team</span>
+              <span class="team-block-name" id="featTeam2Name">Mujahid Smashers</span>
+              <span class="winner-tag-pill" id="featTeam2Role">✓ Winner</span>
+              <div class="team-score-box">
+                <span class="team-big-score winner-score" id="featTeam2Score">59/0</span>
+                <span class="team-overs-label winner-overs" id="featTeam2Overs">(4.0 Ov)</span>
+              </div>
             </div>
+          </div>
+
+          <!-- Result Banner -->
+          <div class="featured-result-banner" id="featResultBanner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span id="featResultText">Mujahid Smashers won by 7 wickets</span>
           </div>
 
           <!-- Fixture Ground & Time Chips -->
           <div class="fixture-meta-pills">
             <span class="meta-pill">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-              Trimohoni Cricket Ground
+              Trimohoni Cricket Ground, Dhaka
             </span>
             <span class="meta-pill">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Morning Sharp Start
+              10 Overs Match Format
             </span>
             <span class="meta-pill gold-pill">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7"/><path d="M14 14.66V17c0 .55.45 1 1 1h2"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
@@ -328,124 +364,177 @@
             </span>
           </div>
 
-          <!-- Countdown Timer Display -->
-          <div class="countdown-block">
-            <span class="countdown-label">Time Remaining Until Match 02:</span>
-            <div class="countdown-timer-wrap">
-              <div class="count-unit">
-                <span class="num" id="countDays">01</span>
-                <span class="lbl">Days</span>
-              </div>
-              <div class="count-unit">
-                <span class="num" id="countHours">07</span>
-                <span class="lbl">Hours</span>
-              </div>
-              <div class="count-unit">
-                <span class="num" id="countMins">13</span>
-                <span class="lbl">Mins</span>
-              </div>
-              <div class="count-unit">
-                <span class="num" id="countSecs">00</span>
-                <span class="lbl">Secs</span>
-              </div>
+          <!-- Tournament Campaign Stats -->
+          <div class="campaign-stats-row">
+            <div class="campaign-stat-item">
+              <span class="campaign-stat-val">5</span>
+              <span class="campaign-stat-lbl">Matches</span>
+            </div>
+            <div class="campaign-stat-item">
+              <span class="campaign-stat-val">254</span>
+              <span class="campaign-stat-lbl">Runs Scored</span>
+            </div>
+            <div class="campaign-stat-item">
+              <span class="campaign-stat-val">99/7</span>
+              <span class="campaign-stat-lbl">Best Score</span>
+            </div>
+            <div class="campaign-stat-item">
+              <span class="campaign-stat-val">T10</span>
+              <span class="campaign-stat-lbl">Format</span>
             </div>
           </div>
         </div>
 
-        <!-- Barakah Blasters Tournament Schedule Column -->
+        <!-- All Tournament Results Column (Right Side) -->
         <div class="results-column fixture-column">
           <div class="fixture-column-head">
             <div>
-              <h3 class="fixture-column-title">Our Match Fixtures</h3>
-              <p class="fixture-column-sub">Barakah Blasters official tournament path</p>
+              <h3 class="fixture-column-title">Tournament Scorecards</h3>
+              <p class="fixture-column-sub">Click any match to inspect scorecard</p>
             </div>
             <a href="assets/hpl7-fixture.jpg" target="_blank" class="fixture-poster-pill" title="View Full Fixture Poster">
-              <span>View Full Fixture</span>
+              <span>Full Fixture</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
 
-          <!-- Match 03 Card -->
-          <div class="past-result-card fixture-match-card">
-            <div class="fixture-match-left">
-              <div class="team-mini-crest crest-taqwa">
-                <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders">
-              </div>
-              <div class="fixture-match-info">
-                <div class="fixture-tags-row">
-                  <span class="res-status-win scheduled-pill">Match 03</span>
-                  <span class="fixture-ground-tag">Trimohoni Ground</span>
+          <!-- 1st Match Card -->
+          <div class="result-match-card active-match" data-match-idx="0">
+            <div class="result-card-top">
+              <span class="result-card-badge">1st Match • League</span>
+              <span class="result-card-date">21 Oct • 10 Ov.</span>
+            </div>
+            <div class="result-card-teams-box">
+              <div class="result-team-entry">
+                <div class="result-team-left">
+                  <img src="assets/logo.png" alt="Barakah Blasters" class="result-team-crest">
+                  <span class="result-team-title">Barakah Blasters</span>
                 </div>
-                <h4 class="res-opponent">vs Taqwa Thunders</h4>
-                <p class="fixture-timing-text">Wednesday, 21 October • Morning Session</p>
+                <span class="result-team-score-num">58/7 <small>(9.3 Ov)</small></span>
+              </div>
+              <div class="result-team-entry is-winner">
+                <div class="result-team-left">
+                  <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="result-team-crest">
+                  <span class="result-team-title">Mujahid Smashers</span>
+                </div>
+                <span class="result-team-score-num">59/0 <small>(4.0 Ov)</small></span>
               </div>
             </div>
-            <div class="fixture-match-badge">
-              <span class="match-day">WED</span>
-              <span class="match-time">21 OCT • MORNING</span>
+            <div class="result-card-footer winner-footer">
+              <span>Mujahid Smashers won by 7 wickets</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
           </div>
 
-          <!-- Match 05 Card -->
-          <div class="past-result-card fixture-match-card">
-            <div class="fixture-match-left">
-              <div class="team-mini-crest crest-mujahid">
-                <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers">
-              </div>
-              <div class="fixture-match-info">
-                <div class="fixture-tags-row">
-                  <span class="res-status-win scheduled-pill">Match 05</span>
-                  <span class="fixture-ground-tag">Trimohoni Ground</span>
+          <!-- 2nd Match Card -->
+          <div class="result-match-card" data-match-idx="1">
+            <div class="result-card-top">
+              <span class="result-card-badge">2nd Match • League</span>
+              <span class="result-card-date">21 Oct • 10 Ov.</span>
+            </div>
+            <div class="result-card-teams-box">
+              <div class="result-team-entry is-winner">
+                <div class="result-team-left">
+                  <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders" class="result-team-crest">
+                  <span class="result-team-title">Taqwa Thunders</span>
                 </div>
-                <h4 class="res-opponent">vs Mujahid Smashers</h4>
-                <p class="fixture-timing-text">Friday, 23 October • Morning Session</p>
+                <span class="result-team-score-num">105/2 <small>(10.0 Ov)</small></span>
+              </div>
+              <div class="result-team-entry">
+                <div class="result-team-left">
+                  <img src="assets/logo.png" alt="Barakah Blasters" class="result-team-crest">
+                  <span class="result-team-title">Barakah Blasters</span>
+                </div>
+                <span class="result-team-score-num">99/7 <small>(10.0 Ov)</small></span>
               </div>
             </div>
-            <div class="fixture-match-badge">
-              <span class="match-day">FRI</span>
-              <span class="match-time">23 OCT • MORNING</span>
+            <div class="result-card-footer winner-footer">
+              <span>Taqwa Thunders won by 6 runs</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
           </div>
 
-          <!-- Match 06 Card -->
-          <div class="past-result-card fixture-match-card">
-            <div class="fixture-match-left">
-              <div class="team-mini-crest crest-taqwa">
-                <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders">
-              </div>
-              <div class="fixture-match-info">
-                <div class="fixture-tags-row">
-                  <span class="res-status-win scheduled-pill">Match 06</span>
-                  <span class="fixture-ground-tag">Trimohoni Ground</span>
+          <!-- 3rd Match Card -->
+          <div class="result-match-card" data-match-idx="2">
+            <div class="result-card-top">
+              <span class="result-card-badge">3rd Match • League</span>
+              <span class="result-card-date">23 Oct • 10 Ov.</span>
+            </div>
+            <div class="result-card-teams-box">
+              <div class="result-team-entry is-winner">
+                <div class="result-team-left">
+                  <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="result-team-crest">
+                  <span class="result-team-title">Mujahid Smashers</span>
                 </div>
-                <h4 class="res-opponent">vs Taqwa Thunders</h4>
-                <p class="fixture-timing-text">Friday, 23 October • Morning Session</p>
+                <span class="result-team-score-num">128/3 <small>(10.0 Ov)</small></span>
+              </div>
+              <div class="result-team-entry">
+                <div class="result-team-left">
+                  <img src="assets/logo.png" alt="Barakah Blasters" class="result-team-crest">
+                  <span class="result-team-title">Barakah Blasters</span>
+                </div>
+                <span class="result-team-score-num">97/7 <small>(9.2 Ov)</small></span>
               </div>
             </div>
-            <div class="fixture-match-badge">
-              <span class="match-day">FRI</span>
-              <span class="match-time">23 OCT • MORNING</span>
+            <div class="result-card-footer winner-footer">
+              <span>Mujahid Smashers won by 31 runs</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
           </div>
 
-          <!-- Grand Final Card -->
-          <div class="past-result-card fixture-match-card grand-final-card">
-            <div class="fixture-match-left">
-              <div class="team-mini-crest crest-trophy">
-                🏆
-              </div>
-              <div class="fixture-match-info">
-                <div class="fixture-tags-row">
-                  <span class="res-status-win final-pill">Grand Final</span>
-                  <span class="fixture-ground-tag">Trimohoni Ground</span>
+          <!-- 4th Match Card -->
+          <div class="result-match-card" data-match-idx="3">
+            <div class="result-card-top">
+              <span class="result-card-badge badge-walkover">4th Match • League</span>
+              <span class="result-card-date">23 Oct • 10 Ov.</span>
+            </div>
+            <div class="result-card-teams-box">
+              <div class="result-team-entry">
+                <div class="result-team-left">
+                  <img src="assets/logo.png" alt="Barakah Blasters" class="result-team-crest">
+                  <span class="result-team-title">Barakah Blasters</span>
                 </div>
-                <h4 class="res-opponent gold-text">Finalist 1 vs Finalist 2</h4>
-                <p class="fixture-timing-text">Friday, 23 October • Championship Finale</p>
+                <span class="result-team-score-num" style="font-size: 0.85rem; font-family: var(--font-body); font-weight: 700; color: var(--text-dim);">Walk Over</span>
+              </div>
+              <div class="result-team-entry is-winner">
+                <div class="result-team-left">
+                  <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders" class="result-team-crest">
+                  <span class="result-team-title">Taqwa Thunders</span>
+                </div>
+                <span class="result-team-score-num" style="font-size: 0.85rem; font-family: var(--font-body); font-weight: 800; color: var(--emerald-dark);">Awarded Win</span>
               </div>
             </div>
-            <div class="fixture-match-badge final-badge">
-              <span class="match-day">FRI</span>
-              <span class="match-time">23 OCT • MORNING</span>
+            <div class="result-card-footer">
+              <span>Walk over • Taqwa Thunders awarded</span>
+              <span style="font-size: 0.7rem; font-weight: 800; color: var(--text-dim);">NO PLAY</span>
+            </div>
+          </div>
+
+          <!-- Final Match Card -->
+          <div class="result-match-card grand-final-result-card" data-match-idx="4">
+            <div class="result-card-top">
+              <span class="result-card-badge badge-final">Grand Final 🏆</span>
+              <span class="result-card-date" style="color: var(--gold-dark); font-weight: 900;">23 Oct • 10 Ov.</span>
+            </div>
+            <div class="result-card-teams-box">
+              <div class="result-team-entry">
+                <div class="result-team-left">
+                  <img src="assets/mujahid-smashers-logo.png" alt="Mujahid Smashers" class="result-team-crest">
+                  <span class="result-team-title">Mujahid Smashers</span>
+                </div>
+                <span class="result-team-score-num">89/5 <small>(10.0 Ov)</small></span>
+              </div>
+              <div class="result-team-entry is-winner">
+                <div class="result-team-left">
+                  <img src="assets/taqwa-thunders-logo.png" alt="Taqwa Thunders" class="result-team-crest">
+                  <span class="result-team-title" style="color: var(--gold-dark); font-weight: 900;">Taqwa Thunders 🏆</span>
+                </div>
+                <span class="result-team-score-num" style="color: var(--gold-dark); font-weight: 900;">92/1 <small>(7.1 Ov)</small></span>
+              </div>
+            </div>
+            <div class="result-card-footer final-footer">
+              <span style="font-weight: 900;">Taqwa Thunders won by 6 wickets (Champions)</span>
+              <span>🏆</span>
             </div>
           </div>
         </div>
